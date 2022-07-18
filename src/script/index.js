@@ -6,29 +6,32 @@ function calcular() {
   let weight = document.querySelector("#peso"); 
   let res = document.querySelector("#res");
 
-  let i = Number(weight.value);
-  let n = Number(height.value) / 100;
-  let c = (i / n ** 2).toFixed(2).replace(".", ",");
+  let i = +weight.value;
+  let n = +height.value / 100;
+  let c = +(i / n ** 2);
 
 if(weight.value.length == 0 && height.value.length == 0){
   alert("É necessário preencher o campo de peso e altura;");
 }else {
-  if(c <30){
-    res.innerHTML += ` ${c} - Peso normal. <strong>Parabéns</strong>! \u{1F604}`;
+  let imc = c.toFixed(2).toString('.',',')
+  if(imc <= 18.5){    
+    res.innerHTML = ` ${imc} - Abaixo do Peso. <strong>Vamos nos cuidar</strong>! \u{1F604}`;
+  }
+  else if(imc > 18.5 && imc <=24.9){
+    res.innerHTML = ` ${imc} - Peso normal. <strong>Parabéns</strong>! \u{1F604}`;
+  }
+  else if(imc >=25 && imc <= 29.9){
+    res.innerHTML = ` ${imc} - Você está com SobrePeso. Nada que uma dieta não resolva! \u{1F604}`;
+  }
+  else if(imc >= 30.0 && imc <=34.9){
+    res.innerHTML = ` ${imc} - Obesidade grau 1. Sinal de altera! \u{1F928} `;
+  }
+  else if(imc >=35 && imc <= 39.9){
+    res.innerHTML = ` ${imc} - Obesidade grau 2. Sinal <strong>Vermelho</Strong>! \u{1F928} `;
+  }
+  else if(imc >= 40 ){
+    res.innerHTML = ` ${imc} - Obesidade grau 3. Sinal <strong>Vermelho</Strong>! \u{1F928} `;
   }
 }
-
   
-    
-//   if (c < 24.9) {    
-//     res.innerHTML += ` ${c} - Peso normal. <strong>Parabéns</strong>! \u{1F604}`;
-//   } else if (c < 29.9) {
-//     res.innerHTML = ` ${c} - Você está com SobrePeso. Nada que uma dieta não resolva! \u{1F604}`;
-//   } else if (c > 30.0) {
-//     res.innerHTML = ` ${c} - Obesidade grau 1. Sinal de altera! \u{1F928} `;
-//   } else if (c > 40.0) {
-//     res.innerHTML = ` ${c} - Obesidade grau 3. Sinal <strong>Vermelho</Strong>! \u{1F928} `;
-//   } else if (weight.value.length == 0 && height.value.length == 0) {
-//     alert("É necessário preencher o campo de peso e altura;");
-//   }
 }
