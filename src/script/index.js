@@ -15,22 +15,22 @@ if(weight.value.length == 0 && height.value.length == 0){
 }else {
   let imc = c.toFixed(2).toString('.',',')
   if(imc <= 18.5){    
-    res.innerHTML = ` ${imc} - Abaixo do Peso. <strong>Vamos nos cuidar</strong>! \u{1F604}`;
+    res.innerHTML = ` ${imc} - Abaixo do Peso. <strong>Cuidado</strong>! \u{1F642}`;
   }
   else if(imc > 18.5 && imc <=24.9){
-    res.innerHTML = ` ${imc} - Peso normal. <strong>Parabéns</strong>! \u{1F604}`;
+    res.innerHTML = ` ${imc} - Peso normal. <strong>Legal</strong>! \u{1F603}`;
   }
   else if(imc >=25 && imc <= 29.9){
-    res.innerHTML = ` ${imc} - Você está com SobrePeso. Nada que uma dieta não resolva! \u{1F604}`;
+    res.innerHTML = ` ${imc} - Você está com SobrePeso! \u{1F643}`;
   }
   else if(imc >= 30.0 && imc <=34.9){
-    res.innerHTML = ` ${imc} - Obesidade grau 1. Sinal de altera! \u{1F928} `;
+    res.innerHTML = ` ${imc} - Obesidade I. Sinal de altera! \u{1F610} `;
   }
   else if(imc >=35 && imc <= 39.9){
-    res.innerHTML = ` ${imc} - Obesidade grau 2. Sinal <strong>Vermelho</Strong>! \u{1F928} `;
+    res.innerHTML = ` ${imc} - Obesidade II. Sinal <strong>Vermelho</Strong>! \u{1F636} `;
   }
   else if(imc >= 40 ){
-    res.innerHTML = ` ${imc} - Obesidade grau 3. Sinal <strong>Vermelho</Strong>! \u{1F928} `;
+    res.innerHTML = ` ${imc} - Obesidade III. <strong>Cuidado</Strong>! \u{1F62C} `;
   }
 }
   
