@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --background: #202022;
+  --title: #0d9441;
+  --subTitle: #12c757;
+  --button: #53e088;
+  --buttonHover: #52a06f;
+  --card: #2f2841;
+  --txtbr: #f0ffffde;
+  --placeholder: f0ffff94;
+}
+
+:root {
+  --fonts: "Roboto", sanserif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fonts);
+}
+
+body {
+  background-color: var(--background);
+}
+body * {
+    box-sizing: border-box;
+}
+body h1 {
+  color: var(--subTitle);
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.textImg {
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.textImg > h1 {
+  margin-bottom: 20px;
+}
+
+.imageAnimate {
+  width: 20vw;
+}
+
+.ident{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+.ident > p  {
+  margin-right: 6px;
+  color: var(--txtbr);
+}
+.ident input {
+  margin-right: 5px;
+  color: var(--txtbr);
+}
+.ident label {
+  margin-right: 5px;
+  color: var(--txtbr);
+}
+
+.section {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 35px;
+  background-color: var(--card);
+  border-radius: 8px;
+  box-shadow: 0px 10px 30px #00000056;
+}
+
+.textfield {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 5px;
+}
+.textfield > input {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #514869;
+  color:  var(--txtbr);;
+  font-size: 12pt;
+  box-shadow: 0px 10px 30px #00000056;
+  outline: none;
+  box-sizing: border-box;
+}
+.textfield > label {
+  color: var(--txtbr);;
+  margin-bottom: 10px;
+}
+.textfield > input::placeholder {
+  color: var(--placeholder);
+}
+
+.buttoncard {
+  width: 70%;
+  margin: 15px;
+  padding: 10px 0px;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+  background-color: var(--button);
+  box-shadow: 0px 8px 30px var(--subTitle);
+  cursor: pointer;
+}
+.buttoncard:hover {
+  background-color: var(--buttonHover);
+  box-shadow: 0px 5px 9px var(--subTitle);
+}
+.result{
+  font-size: large;
+  color: var(--txtbr);
+  text-align: center;
+}
+
+@media only screen and (max-width: 950px) {
+  .card {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .textImg h1 {
+    display: none;
+  }
+  .textImg {
+    width: 100%;
+    height: auto;
+  }
+  .section {
+    width: 100%;
+    height: auto;
+  }
+  .imageAnimate{
+    width: 30vw;
+    margin-bottom: 10px;
+  }
+  .card {
+    width: 90%;
+  }
+}

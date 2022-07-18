@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="src/styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="src/img/Blackvariant-Shadow135-System-Calculator.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="textImg">
+        <h1>Vamos calcular o seu Índice de massa corporal?</h1>
+        <img
+          src="src/img/self-confidence-animate.svg"
+          alt="animated"
+          class="imageAnimate"
+        />
+      </div>
+      <div class="section">
+        <div class="card">
+          <div class="titlecard">
+            <h1>Calculadora IMC</h1>
+            <!-- <div class="ident">
+              <p>Se identifica como:</p>
+              <input type="radio" name="radsex" id="masc" checked />
+              <label for="masc">Masculino</label>
+              <input type="radio" name="radsex" id="fem" />
+              <label for="fem">Feminino</label>
+            </div> -->
+          </div>
+          <!-- <div class="textfield">
+            <label for="idade">Idade</label>
+            <input type="text" name="idade" placeholder="Ex: 25"  id="idade"/>
+          </div> -->
+          <div class="textfield">
+            <label for="altura">Altura</label>
+            <input type="text" name="altura" placeholder="Ex: 173"  id="altura"/>
+          </div>
+          <div class="textfield">
+            <label for="peso">Peso</label>
+            <input type="text" name="peso" placeholder="Ex: 69,3" id="peso"/>
+          </div>
+          <button type="submit" class="buttoncard" onclick="calcular()">Calcular</button>
+          <div class="result" id="res">Resultado</div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script/index.js"></script>
+  </body>
+</html>
